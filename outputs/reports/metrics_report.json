@@ -1,0 +1,79 @@
+{
+  "lr": {
+    "mae": 2.7808,
+    "rmse": 3.3383,
+    "top3_accuracy": 0.9167,
+    "top10_accuracy": 0.9375,
+    "spearman_r": 0.9608,
+    "residuals": {
+      "mean_residual": -2.238,
+      "std_residual": 2.477
+    }
+  },
+  "rf": {
+    "mae": 1.0271,
+    "rmse": 1.8504,
+    "top3_accuracy": 0.9444,
+    "top10_accuracy": 0.9583,
+    "spearman_r": 0.9539,
+    "residuals": {
+      "mean_residual": 0.2547,
+      "std_residual": 1.8327
+    }
+  },
+  "xgb": {
+    "mae": 0.4447,
+    "rmse": 1.5755,
+    "top3_accuracy": 0.9861,
+    "top10_accuracy": 0.9625,
+    "spearman_r": 0.9667,
+    "residuals": {
+      "mean_residual": -0.1441,
+      "std_residual": 1.5689
+    }
+  },
+  "ensemble": {
+    "mae": 0.7161,
+    "rmse": 1.5848,
+    "top3_accuracy": 0.9861,
+    "top10_accuracy": 0.9625,
+    "spearman_r": 0.9706,
+    "residuals": {
+      "mean_residual": -0.3486,
+      "std_residual": 1.5459
+    }
+  },
+  "finisher_regressor": {
+    "mae": 0.4593,
+    "rmse": 2.0495,
+    "top3_accuracy": 1.0,
+    "top10_accuracy": 0.9875,
+    "spearman_r": 0.9592,
+    "residuals": {
+      "mean_residual": 0.4593,
+      "std_residual": 1.9974
+    }
+  },
+  "two_stage": {
+    "mae": 0.8163,
+    "rmse": 1.7127,
+    "top3_accuracy": 0.9861,
+    "top10_accuracy": 0.9792,
+    "spearman_r": 0.9748,
+    "residuals": {
+      "mean_residual": 0.357,
+      "std_residual": 1.675
+    }
+  },
+  "rankblend": {
+    "mae": 1.0438,
+    "rmse": 1.9716,
+    "top3_accuracy": 0.9444,
+    "top10_accuracy": 0.9583,
+    "spearman_r": 0.961,
+    "residuals": {
+      "mean_residual": 0.0835,
+      "std_residual": 1.9698
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "available_outputs": [
+    "metrics_report.json",
+    "models",
+    "plots",
+    "preprocessor.pkl",
+    "reports",
+    "run.log",
+    "runs",
+    "shap_summary.png",
+    "shap_values_test.csv",
+    "shap_waterfall_example.png",
+    "telemetry",
+    "training_summary.pkl",
+    "verify"
+  ],
+  "report_models": [
+    "lr",
+    "rf",
+    "xgb",
+    "ensemble",
+    "finisher_regressor",
+    "two_stage",
+    "rankblend"
+  ],
+  "run_id": "run_20260423_203058",
+  "leakage_audit_status": "passed",
+  "ablation_rows": 7
+}

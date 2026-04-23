@@ -1,0 +1,59 @@
+{
+  "validation_scores": {
+    "lr": {
+      "mae": 2.2159,
+      "rmse": 3.0343
+    },
+    "rf": {
+      "mae": 1.1341,
+      "rmse": 1.9743
+    },
+    "xgb": {
+      "mae": 0.55,
+      "rmse": 1.6774
+    },
+    "ensemble": {
+      "mae": 0.7727,
+      "rmse": 1.7029
+    },
+    "finisher_regressor": {
+      "mae": 0.75,
+      "rmse": 2.8628
+    },
+    "two_stage": {
+      "mae": 0.8591,
+      "rmse": 1.7658
+    },
+    "rankblend": {
+      "mae": 1.1341,
+      "rmse": 1.9743
+    }
+  },
+  "ensemble_weights": {
+    "lr": 0.14320916678075668,
+    "rf": 0.27981411927473654,
+    "xgb": 0.5769767139445068
+  },
+  "ranking_weights": {
+    "lr": 0.14320916678075668,
+    "rf": 0.27981411927473654,
+    "xgb": 0.5769767139445068
+  },
+  "feature_count": 78,
+  "models": [
+    "ensemble",
+    "finisher_regressor",
+    "lr",
+    "rankblend",
+    "rf",
+    "two_stage",
+    "xgb"
+  ],
+  "classifiers": [
+    "dnf",
+    "podium",
+    "points"
+  ],
+  "probability_calibration": "sigmoid",
+  "best_validation_model": "xgb"
+}

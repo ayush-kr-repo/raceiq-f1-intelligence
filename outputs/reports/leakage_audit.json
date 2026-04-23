@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "rows_audited": 2979,
+  "violations": {
+    "driver_recent_form_without_history": 0,
+    "constructor_recent_form_without_history": 0,
+    "track_specific_score_without_history": 0
+  },
+  "notes": [
+    "Rolling and historical features are expected to be null until prior history exists.",
+    "Explainer telemetry outputs are post-race artifacts and should not be used as predictor inputs."
+  ]
+}
