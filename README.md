@@ -1,4 +1,4 @@
-# F1 Neon Race Intelligence
+# RaceIQ
 
 An end-to-end Formula 1 machine learning platform that predicts race outcomes, explains the predictions, and visualizes race dynamics through a premium interactive dashboard.
 
