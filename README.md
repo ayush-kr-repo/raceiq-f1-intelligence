@@ -20,7 +20,7 @@ An end-to-end Formula 1 machine learning platform that predicts race outcomes, e
 | Two-stage | 0.8163 | 1.7127 | 98.61% | 97.92% | 0.9748 |
 | Random Forest | 1.0271 | 1.8504 | 94.44% | 95.83% | 0.9539 |
 
-- MAE is measured in finishing positions, so the best model was off by less than half a finishing position on average.
+MAE is measured in finishing positions, so the best model was off by less than half a finishing position on average.
 
 Dataset: 2,979 driver-race records across 149 races from 2018-2024.  
 Test set: 479 driver-race records across the 2024 season.  
@@ -45,6 +45,7 @@ Leakage audit: passed across 2,979 audited rows with 0 detected violations.
 
 ![Ranking comparison](outputs/plots/latest_race_rankblend_comparison.png)
 
+These plots are generated from the saved evaluation outputs in `outputs/plots/`.
 
 ## Key Technical Work
 
@@ -202,21 +203,21 @@ python -m unittest tests.test_project_smoke
 
 ## Why This Project Matters
 
-- Combines machine learning, data engineering, explainability, domain understanding, and UI/product work
-- Uses real race data instead of toy datasets
-- Treats race prediction as both regression and ranking
-- Separates predictor logic from explainer logic
+- Combines machine learning, data engineering, explainability, domain understanding, and UI/product work.
+- Uses real race data instead of toy datasets.
+- Treats race prediction as both regression and ranking.
+- Separates predictor logic from explainer logic.
 
 ## Current Limitations
 
 - FastF1 session quality varies by weekend and can require skips
-- some telemetry comparisons are post-race explainability outputs, not pre-race features
-- ranking-aware logic is heuristic rather than a full learning-to-rank implementation
-- probabilities are calibrated with lightweight sigmoid calibration, but rare-event reliability can still improve
+- Some telemetry comparisons are post-race explainability outputs, not pre-race features
+- Ranking-aware logic is heuristic rather than a full learning-to-rank implementation
+- Probabilities are calibrated with lightweight sigmoid calibration, but rare-event reliability can still improve
 
 ## Future Upgrades
 
-- public deployment
-- true learn-to-rank model
-- richer telemetry-derived historical features
-- automated CI and packaging
+- Public deployment
+- True learn-to-rank model
+- Richer telemetry-derived historical features
+- Automated CI and packaging
