@@ -27,6 +27,25 @@ Test set: 479 driver-race records across the 2024 season.
 Feature count: 78 engineered features.  
 Leakage audit: passed across 2,979 audited rows with 0 detected violations.
 
+## Project Preview
+
+### Race Prediction Dashboard
+
+![Race prediction dashboard](outputs/plots/latest_race_prediction_dashboard.png)
+
+### Ablation Study
+
+![Ablation study](outputs/plots/ablation_study.png)
+
+### Actual vs Predicted Finish Order
+
+![Actual vs predicted finish](outputs/plots/actual_vs_predicted_two_stage.png)
+
+### Ranking Comparison
+
+![Ranking comparison](outputs/plots/latest_race_rankblend_comparison.png)
+
+
 ## Key Technical Work
 
 - Built temporal train, validation, and test splits to reduce race-history leakage.
@@ -89,6 +108,7 @@ Leakage audit: passed across 2,979 audited rows with 0 detected violations.
 - Predicted podium and probability views.
 - Telemetry, tyre degradation, and strategy visualizations.
 - SHAP and per-driver explanation records.
+- Additional residual, telemetry, and probability plots are available in `outputs/plots/` and `outputs/telemetry/`.
 
 ## How To Run
 
