@@ -20,6 +20,8 @@ An end-to-end Formula 1 machine learning platform that predicts race outcomes, e
 | Two-stage | 0.8163 | 1.7127 | 98.61% | 97.92% | 0.9748 |
 | Random Forest | 1.0271 | 1.8504 | 94.44% | 95.83% | 0.9539 |
 
+- MAE is measured in finishing positions, so the best model was off by less than half a finishing position on average.
+
 Dataset: 2,979 driver-race records across 149 races from 2018-2024.  
 Test set: 479 driver-race records across the 2024 season.  
 Feature count: 78 engineered features.  
@@ -57,28 +59,28 @@ Leakage audit: passed across 2,979 audited rows with 0 detected violations.
 
 ## Main ML Features
 
-- time-aware split to avoid leakage
-- advanced historical features:
-  - driver recent form
-  - constructor recent form
-  - track-specific driver score
-  - wet performance score
-  - street circuit score
+- Time-aware split to avoid leakage.
+- Advanced historical features:
+  - Driver recent form
+  - Constructor recent form
+  - Track-specific driver score
+  - Wet performance score
+  - Street circuit score
   - DNF risk score
-  - strategy score
-  - speed-trap and degradation history
-- probability models:
+  - Strategy score
+  - Speed-trap and degradation history
+- Probability models:
   - DNF probability
-  - podium probability
-  - points probability
-- prediction strategies:
-  - baseline regressors
-  - weighted ensemble
-  - two-stage race predictor
-  - ranking-aware blend
-- explainability:
+  - Podium probability
+  - Points probability
+- Prediction strategies:
+  - Baseline regressors
+  - Weighted ensemble
+  - Two-stage race predictor
+  - Ranking-aware blend
+- Explainability:
   - SHAP global summary
-  - per-prediction top feature contributions
+  - Per-prediction top feature contributions
 
 ## Dashboard Highlights
 
@@ -180,10 +182,10 @@ python -m unittest tests.test_project_smoke
 
 ## Why This Project Matters
 
-- combines machine learning, data engineering, explainability, domain understanding, and UI/product work
-- uses real race data instead of toy datasets
-- treats race prediction as both regression and ranking
-- separates predictor logic from explainer logic
+- Combines machine learning, data engineering, explainability, domain understanding, and UI/product work
+- Uses real race data instead of toy datasets
+- Treats race prediction as both regression and ranking
+- Separates predictor logic from explainer logic
 
 ## Current Limitations
 
