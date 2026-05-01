@@ -1,15 +1,37 @@
 # RaceIQ : F1 Race Intelligence Platform
 
-An end-to-end Formula 1 machine learning platform that predicts race outcomes, explains the predictions, and visualizes race dynamics through a premium interactive dashboard.
+An end-to-end Formula 1 machine learning platform that predicts race outcomes, explains the predictions, and visualizes race dynamics through an interactive Streamlit dashboard.
 
 ## What This Project Does
 
-- collects or reuses historical FastF1 race data
-- engineers race, form, track, reliability, and strategy features
-- trains multiple prediction models plus DNF/podium/points probability models
-- combines them into ranking-aware and two-stage race predictors
-- generates explainability reports and telemetry-backed visuals
-- serves a neon-styled Streamlit dashboard for exploration
+- Collects or reuses historical FastF1 race data.
+- Engineers race, form, track, reliability, and strategy features.
+- Trains multiple prediction models plus DNF, podium, and points probability models.
+- Combines them into ranking-aware and two-stage race predictors.
+- Generates explainability reports and telemetry-backed visuals.
+- Serves an interactive Streamlit dashboard for race-level exploration.
+
+## Results
+
+| Model | MAE | RMSE | Top-3 Accuracy | Top-10 Accuracy | Spearman r |
+|---|---:|---:|---:|---:|---:|
+| XGBoost | 0.4447 | 1.5755 | 98.61% | 96.25% | 0.9667 |
+| Ensemble | 0.7161 | 1.5848 | 98.61% | 96.25% | 0.9706 |
+| Two-stage | 0.8163 | 1.7127 | 98.61% | 97.92% | 0.9748 |
+| Random Forest | 1.0271 | 1.8504 | 94.44% | 95.83% | 0.9539 |
+
+Dataset: 2,979 driver-race records across 149 races from 2018-2024.  
+Test set: 479 driver-race records across the 2024 season.  
+Feature count: 78 engineered features.  
+Leakage audit: passed across 2,979 audited rows with 0 detected violations.
+
+## Key Technical Work
+
+- Built temporal train, validation, and test splits to reduce race-history leakage.
+- Engineered 78 features covering driver form, constructor form, track fit, reliability, weather sensitivity, DNF risk, and strategy signals.
+- Compared Ridge, Random Forest, XGBoost, ensemble, finisher-regressor, two-stage, and rank-blend approaches.
+- Added SHAP-based global and per-prediction explainability.
+- Ran ablation analysis showing MAE improvement from 4.2227 baseline to 0.7161 with the full ensemble pipeline.
 
 ## Architecture
 
@@ -60,13 +82,11 @@ An end-to-end Formula 1 machine learning platform that predicts race outcomes, e
 
 ## Dashboard Highlights
 
-- premium neon visual design
-- animated hero and glassmorphism cards
-- race selector and model selector
-- model lab with interactive charts
-- predicted podium and probability pressure maps
-- telemetry bay with tyre degradation and strategy outputs
-- explanation tab with SHAP and per-driver explanation records
+- Race selector and model selector.
+- Model comparison charts.
+- Predicted podium and probability views.
+- Telemetry, tyre degradation, and strategy visualizations.
+- SHAP and per-driver explanation records.
 
 ## How To Run
 
@@ -158,7 +178,7 @@ or the smoke tests only:
 python -m unittest tests.test_project_smoke
 ```
 
-## Why This Project Is Strong
+## Why This Project Matters
 
 - combines machine learning, data engineering, explainability, domain understanding, and UI/product work
 - uses real race data instead of toy datasets
