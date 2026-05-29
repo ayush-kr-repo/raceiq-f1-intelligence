@@ -66,30 +66,6 @@ RaceIQ treats F1 race prediction as both a **regression** and a **ranking** prob
 
 ---
 
-## 🖥️ Dashboard Pages
-
-> Accessible via the interactive Streamlit app (`streamlit run app.py`)
-
-### 🏁 Race Prediction View
-- Race selector and model selector dropdowns
-- Predicted podium with driver probability bars
-- Side-by-side model comparison charts
-- Per-driver finishing position confidence
-
-### 📡 Telemetry Bay
-- Tyre degradation curves across stints
-- Strategy timeline overlays
-- Speed-trap comparisons between drivers
-- Post-race telemetry explainability visuals
-
-### 🧠 Explainability Panel
-- SHAP global feature importance summary
-- Per-prediction top-10 feature contributions
-- Residual analysis across the 2024 season
-- Prediction explanation CSV export
-
----
-
 ## 🧠 Tech Stack
 
 ### ML / Data
